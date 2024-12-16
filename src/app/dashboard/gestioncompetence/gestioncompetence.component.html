@@ -1,0 +1,73 @@
+<app-menubarr></app-menubarr>
+<main class="main">
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="Open()">
+    Ajouter
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Competence</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" >
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Ajouter votre Competence" id="floatingTextarea"  [(ngModel)]="nomComp" name="nomComp"></textarea>
+            <label for="floatingTextarea">Ajouter votre Competence</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" (click)="ajout()">Ajouter</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container border ">
+    <div class="text-center"><h4>Ma liste de Competences ✔</h4></div>
+    <div class="row mt-5 ms-5">
+      @for (item of   listCompetence; track $index) {
+        <div class="cards ms-5 md-2 mt-5">
+            <p><span class= "bi bi-check-square-fill me-3" style="color: #040b69;"></span> {{ item.nom }}</p>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-danger"
+              style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" (click)="delete(item.nom)">
+                Supprimer
+              </button>
+          <button type="button" class="btn btn-primary me-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="chargercomp(item.nom)">
+            Modifier
+          </button>
+         
+      </div>
+    }
+<!-- Modal pour modifier une competence-->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modifer la competence</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <textarea class="form-control" placeholder="Ajouter votre Competence" id="floatingTextarea"  [(ngModel)]="nomComp" name="nomComp"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" (click)="ModifiComp(nomComp)">Modifier</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <!-- <div class="cards ms-5  md-2 mt-5">
+            <p> <span class="bi bi-check-square-fill me-3" style="color: #040b69;"></span>Lorem ipsum dolor sit,</p>
+        </div>
+        <div class="cards ms-5  md-2 mt-5">
+            <p> <span class="bi bi-check-square-fill me-3" style="color: #040b69;"></span>Lorem ipsum dolor sit,</p>
+        </div> -->
+    </div>
+  </div>
+</main>

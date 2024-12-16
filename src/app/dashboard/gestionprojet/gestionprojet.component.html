@@ -1,0 +1,77 @@
+<app-menubarr></app-menubarr>
+<div class="container me-5">
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="projet">
+    Ajout projet
+  </button>
+  
+  <!-- Modal ajout projet-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter un projet</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputText" class="form-label">Nom du projet</label>
+              <input type="text" class="form-control" id="Nomprojet" aria-describedby="emailHelp" name="projet" [(ngModel)]="nomprojet">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputText" class="form-label">Categorie</label>
+              <input type="text" class="form-control" id="Catprojet" aria-describedby="emailHelp" name="categorie" [(ngModel)]="Categories">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputText1" class="form-label">Url Image</label>
+              <input type="text" class="form-control" id="Urlimage" name="image" [(ngModel)]="urlimage">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="Ajoutprojet()">Enregister</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="text-center mb-5"><h4>Mes projets Réalisés ✔</h4></div>
+    <nav class="navMenu">
+        <a (click)="getBycategories('')">Tous</a>
+        <a (click)="getBycategories('maquette')" >Maq</a>
+        <a (click)="getBycategories('app')">App</a>
+        <a (click)="getBycategories('design')">Web</a>
+        <div class="dot"></div>
+      </nav>
+    <div class="row row-cols-1 row-cols-md-3 g-2 ms-5">
+      @for (item of getProjetsPage(); track $index){ 
+        <div class="col">
+          <div class="card">
+            <img [src]= "item.image" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ item.nom }}</h5>
+              <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+            </div>
+            <div class="action d-flex">
+            <button type="button" class="btn btn-primary btn-sm w-50">Small button</button>
+            <button type="button" class="btn btn-danger btn-sm w-50" (click)="supp(item.nom)">Supprimer</button>
+          </div>
+        </div>
+        </div>
+      }
+        
+      </div>
+      <div class="pagination-container wow zoomIn mar-b-1x ms-5" data-wow-duration="0.5s">
+
+        <ul class="pagination">
+            <li class="pagination-item--wide first"> <a class="pagination-link--wide first"  (click)="pageActuelle = pageActuelle - 1">Previous</a> </li>
+            @for (page of pages; track $index){ 
+            <li class="pagination-item first-number"> <a class="pagination-link" (click)="pageActuelle = page"></a> {{ page }}</li>
+            
+             }
+            <li class="pagination-item--wide last"> <a class="pagination-link--wide last"  (click)="pageActuelle = pageActuelle + 1">Next</a> </li>
+        </ul>
+    
+    </div>
+</div>

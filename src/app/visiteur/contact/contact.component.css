@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.container-fluid{
+    height: 300px;
+    /* background-image: url("https://img.freepik.com/vecteurs-libre/marketing-par-e-mail-discussion-internet-assistance-24-heures-24_335657-3009.jpg?ga=GA1.1.2119338395.1717125344&semt=sph"); */
+}
+img{
+    height: 300px;
+    width:222vh;
+}

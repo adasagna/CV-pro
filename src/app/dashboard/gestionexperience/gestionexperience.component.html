@@ -1,0 +1,159 @@
+<app-menubarr></app-menubarr>
+<div class="banier"></div>
+<div class="text-center mt-5"><h2>Mes experiences</h2></div>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal" id="Ajout">
+   Ajout experience
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="exampleInputText" class="form-label">Titre</label>
+                <input type="text" class="form-control" id="Nomprojet" aria-describedby="emailHelp" name="projet">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputText" class="form-label">Année </label>
+                <input type="number" class="form-control" min="2000" max="2100" step="1" placeholder="YYYY">
+            </div>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Ajouter votre Competence" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea">Description</label>
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="container mt-5 me-5">
+    <div class="row mt-5">
+      <div class="col ms-5">
+        <div class="main-timeline ms-5">
+          <div class="timeline">
+            <a href="#" class="timeline-content">
+              <span class="timeline-year">2018</span>
+              <div class="timeline-icon">
+                <i class="fa fa-rocket" aria-hidden="true"></i>
+              </div>
+              <div class="content">
+                <h3 class="title">Web Development</h3>
+                <p class="description">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
+              </div>
+            </a>
+            <div class="action ms-5">
+                <button type="button" class="btn btn-success btn-sm ms-5">Modifier</button>
+                <button type="button" class="btn btn-danger btn-sm ms-5">Supprimer</button>
+            </div>
+          </div>
+          <div class="timeline">
+            <a href="#" class="timeline-content">
+              <span class="timeline-year">2017</span>
+              <div class="timeline-icon">
+                <i class="fa fa-users" aria-hidden="true"></i>
+              </div>
+              <div class="content">
+                <h3 class="title">JavaScript</h3>
+                <p class="description">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
+              </div>
+            </a>
+            <div class="action  float-end" id="action">
+                <button type="button" class="btn btn-success btn-sm me-5">Modifier</button>
+                <button type="button" class="btn btn-danger btn-sm me-5">Supprimer</button>
+            </div>
+          </div>
+          <div class="timeline">
+            <a href="#" class="timeline-content">
+              <span class="timeline-year">2017</span>
+              <div class="timeline-icon">
+                <i class="fa fa-cog" aria-hidden="true"></i>
+              </div>
+              <div class="content">
+                <h3 class="title">Mongo DB</h3>
+                <p class="description">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
+              </div>
+            </a>
+            <div class="action ms-5">
+                <button type="button" class="btn btn-success btn-sm ms-5">Modifier</button>
+                <button type="button" class="btn btn-danger btn-sm ms-5">Supprimer</button>
+            </div>
+          </div>
+          <div class="timeline">
+            <a href="#" class="timeline-content">
+              <span class="timeline-year">2017</span>
+              <div class="timeline-icon">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+              </div>
+              <div class="content">
+                <h3 class="title">BlackPearl</h3>
+                <p class="description">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
+              </div>
+            </a>
+            <div class="action  float-end " id="action">
+                <button type="button" class="btn btn-success btn-sm me-5">Modifier</button>
+                <button type="button" class="btn btn-danger btn-sm me-5">Supprimer</button>
+            </div>
+          </div>
+          <!-- <div class="timeline">
+            <a href="#" class="timeline-content">
+              <span class="timeline-year">2017</span>
+              <div class="timeline-icon">
+                <i class="fa fa-globe" aria-hidden="true"></i>
+              </div>
+              <div class="content">
+                <h3 class="title">Angular</h3>
+                <p class="description">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="timeline">
+            <a href="#" class="timeline-content">
+              <span class="timeline-year">2017</span>
+              <div class="timeline-icon">
+                <i class="fa fa-apple" aria-hidden="true"></i>
+              </div>
+              <div class="content">
+                <h3 class="title">Laravel</h3>
+                <p class="description">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="timeline">
+            <a href="#" class="timeline-content">
+              <span class="timeline-year">2017</span>
+              <div class="timeline-icon">
+                <i class="fa fa-edit" aria-hidden="true"></i>
+              </div>
+              <div class="content">
+                <h3 class="title">Creapure</h3>
+                <p class="description">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
+              </div>
+            </a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>    

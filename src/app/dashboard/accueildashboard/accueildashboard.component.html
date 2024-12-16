@@ -1,0 +1,146 @@
+<app-menubarr></app-menubarr>
+<nav class="navbar border w-50 float-end" (click)="showmessage()">
+    <a class="bi bi-bell-fill ms-5"></a>
+</nav>
+<main class="main ms-5" >
+    <div class="banier mt-5">yhhtyjy</div>
+    <div class="container me-5 border gap-5 " >
+        <div class="row ms-5 W-100 gap-5" *ngIf="!message">
+            <div class="cards bg-c-blue order-card col-md-4 mt-5" >
+                <div class="cards-block">
+                    <h6 class="m-b-20">Orders Received</h6>
+                    <h2 class="text-right"><i class="fa fa-cart-plus f-left"></i><span>486</span></h2>
+                    <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
+                </div>
+            </div>
+            <div class="cards bg-c-blue order-card col-md-4 mt-5">
+                <div class="cards-block">
+                    <h6 class="m-b-20">Orders Received</h6>
+                    <h2 class="text-right"><i class="fa fa-cart-plus f-left"></i><span>486</span></h2>
+                    <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
+                </div>
+            </div>
+            <div class="cards bg-c-blue order-card col-md-4 mt-5">
+                <div class="cards-block">
+                    <h6 class="m-b-20">Orders Received</h6>
+                    <h2 class="text-right"><i class="fa fa-cart-plus f-left"></i><span>486</span></h2>
+                    <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
+                </div>
+            </div>
+</div>
+<!-- gerer les notifications -->
+<div class="row clearfix"  *ngIf="message">
+    <div class="text-center mt-3"><h1>Notifications</h1></div>
+    <div class="col-lg-12">
+        <div class="card chat-app">
+            <div id="plist" class="people-list">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-search"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Search...">
+                </div>
+                <ul class="list-unstyled chat-list mt-2 mb-0">
+                    <li class="clearfix">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">Vincent Porter</div>
+                            <div class="status"> <i class="fa fa-circle offline"></i> left 7 mins ago </div>                                            
+                        </div>
+                    </li>
+                    <li class="clearfix active">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">Aiden Chavez</div>
+                            <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">Mike Thomas</div>
+                            <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                        </div>
+                    </li>                                    
+                    <li class="clearfix">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">Christian Kelly</div>
+                            <div class="status"> <i class="fa fa-circle offline"></i> left 10 hours ago </div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar8.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">Monica Ward</div>
+                            <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">Dean Henry</div>
+                            <div class="status"> <i class="fa fa-circle offline"></i> offline since Oct 28 </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="chat">
+                <div class="chat-header clearfix">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
+                            </a>
+                            <div class="chat-about">
+                                <h6 class="m-b-0">Aiden Chavez</h6>
+                                <small>Last seen: 2 hours ago</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 hidden-sm text-right">
+                            <a href="javascript:void(0);" class="btn btn-outline-secondary"><i class="bi bi-camera-video-fill"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-outline-primary"><i class="bi bi-card-image"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-outline-info"><i class="bi bi-gear-fill"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-outline-warning"><i class="bi bi-question-circle-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-history">
+                    <ul class="m-b-0">
+                        <li class="clearfix">
+                            <div class="message-data text-right">
+                                <span class="message-data-time">10:10 AM, Today</span>
+                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar">
+                            </div>
+                            <div class="message other-message float-right"> Hi Aiden, how are you? How is the project coming along? </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="message-data">
+                                <span class="message-data-time">10:12 AM, Today</span>
+                            </div>
+                            <div class="message my-message">Are we meeting today?</div>                                    
+                        </li>                               
+                        <li class="clearfix">
+                            <div class="message-data">
+                                <span class="message-data-time">10:15 AM, Today</span>
+                            </div>
+                            <div class="message my-message">Project has been already finished and I have results to show you.</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="chat-message clearfix">
+                    <div class="input-group mb-0">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="bi bi-send-check-fill"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Enter text here...">                                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+</main>
